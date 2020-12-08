@@ -7,17 +7,22 @@
   <body>
     <h1>Hola <%= locals.user.name %></h1>
     <p>Ultimo inicio de sesion: <%= locals.user.lastlogindate %> </p>
+    <a href=/logout>Cerrar sesion</a>
     <h3>Editar perfil</h3>
     <form action="/" method="POST">
       <label>Nombre</label>
       <input type="text" name="name" id="name"/>
       <input type="submit"/>
-      <br/>
-      <a href=/logout>Cerrar sesion</a>
-      <% if (locals.msg) { %>
-        <p><%= locals.msg %> </p>
-    <% } %></html>
   </form>
+  <h3>Auditoria</h3>
+  <a href=/logs>Bitacora</a>
+  <br/>
+  <h3>Documentos</h3>
+  <a href=/sign>Firmar Documentos</a>
+  <br/>
+  <a href=/crypt>Cifrar Documentos</a>
+  <br/>
+  <br/>
+  <a href=/logout>Cerrar sesion</a>
   </body>
-  
 </html>
